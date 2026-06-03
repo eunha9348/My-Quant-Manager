@@ -1,0 +1,28 @@
+data:
+  default_start: "2020-01-01"
+  default_end: null        # null = today
+  interval: "1d"           # 1m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo
+  cache_dir: "data/cache"
+
+backtest:
+  initial_capital: 10000000   # 1천만원
+  commission: 0.0015          # 0.15%
+  slippage: 0.001             # 0.1%
+
+portfolio:
+  max_position_size: 0.2      # 단일 종목 최대 비중 20%
+  rebalance_freq: "monthly"   # daily, weekly, monthly
+
+universe:
+  kospi200:
+    - "005930.KS"  # 삼성전자
+    - "000660.KS"  # SK하이닉스
+    - "035420.KS"  # NAVER
+    - "005380.KS"  # 현대차
+    - "051910.KS"  # LG화학
+  us_tech:
+    - "AAPL"
+    - "MSFT"
+    - "GOOGL"
+    - "NVDA"
+    - "META"
